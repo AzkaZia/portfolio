@@ -13,3 +13,29 @@ function changeSlide(direction) {
   if (currentSlide < 0) currentSlide = slides.length - 1;
   showSlide(currentSlide);
 }
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const slideshowContainer = document.querySelector('.slideshow-container');
+
+slideshowContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+slideshowContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  if (Math.abs(swipeDistance) > 50) { // swipe threshold
+    if (swipeDistance < 0) {
+      changeSlide(1); // swipe left → next
+    } else {
+      changeSlide(-1); // swipe right → previous
+    }
+  }
+}
