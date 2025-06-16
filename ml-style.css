@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #9eccf0;
+  color: #333;
+  padding: 1rem;
+}
+
+@font-face {
+  font-family: 'Perandory Condensed';
+  src: url('font/Perandory-Condensed.otf') format('opentype');
+  font-style: normal;
+}
+
+.home-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 40px;   
+  height: 40px;
+  z-index: 10;
+}
+
+.home-icon img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(20%) saturate(431%) hue-rotate(338deg) brightness(104%) contrast(93%);
+}
+.ml-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+
+}
+
+.ml-header h1 {
+  font-family: 'Perandory Condensed';
+  font-size: 3rem; 
+  letter-spacing: 2px; 
+  margin: 0 auto;
+  color: #fff3cf;
+  text-align: center;
+  flex-grow: 1;
+}
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-card h2 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+}
+
+.project-card .tech {
+  font-style: italic;
+  color: #666;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff9e6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.project-link:hover {
+  background-color: #000;
+}
+
+@media (max-width: 600px) {
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}

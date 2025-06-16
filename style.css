@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Perandory Condensed';
+  src: url('font/Perandory-Condensed.otf') format('opentype');
+  font-style: normal;
+}
+body, html {
+  height: 100%;
+  font-family: Georgia, serif;
+  background-color: #9eccf0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-text {
+  height: auto;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.nav {
+  position: relative;
+  margin-top: 40px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.nav button {
+  background: transparent;
+  color: #fff3cf;
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Perandory Condensed';
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 500px;
+  text-shadow: 0 0 4px rgba(128, 128, 128, 0.4);
+}
+
+
+.left-swirl-upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: auto;
+  z-index: 0;
+}
+
+.left-swirl-lower {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 27vw;
+  height: auto;
+  z-index: 0;
+}
+
+.upper-right-swirl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18vw;
+  height: auto;
+  z-index: 0;
+}
+
+.lower-right-swirl {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 37.4vw;
+  height: auto;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .main-text {
+    width: 90%;
+  }
+
+  .nav {
+    margin-top: 30px;
+  }
+
+  .nav button {
+    width: 160px;
+    padding: 10px 20px;
+  }
+
+  .left-swirl-upper,
+  .left-swirl-lower {
+    width: 45vw;
+  }
+
+  .upper-right-swirl {
+    width: 25vw;
+  }
+
+  .lower-right-swirl {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text {
+    width: 95%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav button {
+    width: 80%;
+    max-width: 220px;
+  }
+
+  .left-swirl-upper,
+  .left-swirl-lower {
+    width: 55vw;
+  }
+
+  .upper-right-swirl {
+    width: 30vw;
+  }
+
+  .lower-right-swirl {
+    width: 55vw;
+  }
+}

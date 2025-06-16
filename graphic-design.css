@@ -1,0 +1,168 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #9eccf0;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+@font-face {
+  font-family: 'Perandory Condensed';
+  src: url('font/Perandory-Condensed.otf') format('opentype');
+  font-style: normal;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  display: block;
+  margin: 5vh auto 0 auto;
+  max-height: 80vh;
+  max-width: 90vw;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+.caption {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff3cf;
+  font-family: 'Perandory Condensed';
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  font-size: 2rem;
+  background: none;
+  color: #fff3cf;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.prev:hover, .next:hover {
+  color: #333;
+}
+
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+.header {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.page-title {
+  font-family: 'Perandory Condensed';
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  color: #fff3cf;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.back-button {
+  display: none; 
+}
+
+.back-button:hover {
+ background-color: #000;
+}
+
+.home-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 40px; 
+  height: 40px;
+  z-index: 10;
+}
+
+.home-icon img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(20%) saturate(431%) hue-rotate(338deg) brightness(104%) contrast(93%);
+}
+
+@media (max-width: 600px) {
+  .slide img {
+    display: block;
+    margin: 5vh auto 0 auto;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .caption {
+    text-align: center;
+    padding: 0 1rem;
+    font-family: 'Perandory Condensed';
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  .prev,
+  .next {
+    top: 90%; 
+    transform: translateY(-50%);
+    background-color: transparent;
+  color: #fff3cf;
+    box-shadow: none;
+  }
+
+  .prev {
+    left: 20%;
+  }
+
+  .next {
+    right: 20%;
+  }
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

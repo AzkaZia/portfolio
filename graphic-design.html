@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graphic Design Gallery</title>
+  <link rel="stylesheet" href="graphic-design.css" />
+</head>
+<body>
+  <div class="header">
+    <h1 class="page-title">Graphic Design</h1>
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="slide active">
+      <div class="slide-content">
+        <img src="images/d1.png" alt="Design 1" />
+        <p class="caption">i love this lyric</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">    
+        <img src="images/d2.png" alt="Design 2" />
+        <p class="caption">A backdrop for my school's annual carnival</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">    
+        <img src="images/d3.png" alt="Design 3" />
+        <p class="caption">One of several menu designs for the same event</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">   
+        <img src="images/d4.png" alt="Design 4" />
+      </div>
+    </div>
+    
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  <a href="index.html" class="home-icon">
+    <img src="images/home-icon.svg" alt="Home">
+  </a>
+  <script src="gallery.js"></script>
+</body>
+</html>
